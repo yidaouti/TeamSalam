@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Style the scrollbar */
+::-webkit-scrollbar {
+  width: 20px; /* Set width of the scrollbar */
+  height: 8px; /* Set height of the horizontal scrollbar (if applicable) */
+  opacity: 0.8; /* Set opacity to 1 for full visibility (adjust if needed) */
+}
+
+/* Style the thumb (the part you drag) */
+::-webkit-scrollbar-thumb {
+  background-color: #C8102E; /* Red color for the scrollbar thumb */
+  border-radius: 10px; /* Optional: Round the corners of the thumb */
+  border: 3px solid #fff; /* Optional: Add a border around the thumb for more contrast */
+}
+
+/* Style the track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light grey background for the scrollbar track */
+  border-radius: 10px; /* Optional: Round the corners of the track */
+}
+
+/* Optional: Style the hover state for the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9e0e23; /* Darker red when hovering over the thumb */
+}
+
+
+
+.bg-service-pattern {
+  position: relative;
+  background-image: url(./assets/images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden; /* Ensures the overlay stays contained */
+}
+
+.bg-service-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00209F;
+  opacity: 0.4;
+  pointer-events: none; /* Prevents interactions with the overlay */
+  z-index: 1;
+}
+
+.bg-service-pattern > * {
+  position: relative;
+  z-index: 2; /* Ensures the content appears above the overlay */
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+/* .thai-border{
+  border-top:12px solid #00209F;
+  border-bottom:12px solid #00209F;
+}
+
+.thai-border-white{
+  border-top:8px solid white ;
+  border-bottom:8px solid white;
+} */
