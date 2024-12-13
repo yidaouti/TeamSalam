@@ -1,26 +1,18 @@
 import React from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 import img from '../assets/images/img3.jpg';
 
 const AboutUs = () => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold: 0.2 });
 
-  React.useEffect(() => {
-    if (inView) {
-      controls.start({ opacity: 1, x: 0 });
-    }
-  }, [controls, inView]);
+
 
   return (
     <section className="pt-16 bg-gray-100 min-h-screen flex items-center justify-center">
       <div className="container mx-auto px-5 sm:px-10 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
         {/* Image */}
         <motion.div
-          ref={ref}
           initial={{ opacity: 0, x: -50 }}
-          animate={controls}
+          animate={{opacity:1,x:0}}
           transition={{ duration: 1 }}
           className="flex-1"
         >
