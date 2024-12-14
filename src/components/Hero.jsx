@@ -4,8 +4,8 @@ import img from '../assets/images/img5.png';
 
 const Hero = () => {
   return (
-    <section id='home' className="sm:mt-10 md:mt-10 min-h-screen flex items-center justify-center relative py-32 lg:py-36 bg-white">
-      <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 flex flex-col lg:flex-row gap-10 lg:gap-12">
+<section id='home' className="min-h-screen flex items-center justify-center relative pt-44 md:pt-40 lg:pt-44 pb-32 lg:pb-36 bg-white">
+<div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 flex flex-col lg:flex-row gap-10 lg:gap-12">
         {/* Decorative Elements */}
         <div className="absolute w-full lg:w-1/2 inset-y-0 lg:right-0 hidden lg:block">
           <motion.span
