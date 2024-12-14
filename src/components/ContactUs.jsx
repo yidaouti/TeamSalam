@@ -60,7 +60,7 @@ const ContactUs = () => {
                                     data-original="#000000" />
                             </svg>
                             <a href="javascript:void(0)" className="text-sm ml-4">
-                                <strong>info@example.com</strong>
+                                <strong>yidaouti@gmail.com</strong>
                             </a>
                         </li>
                         <li className="flex items-center text-red-600">
@@ -71,7 +71,7 @@ const ContactUs = () => {
                                     data-original="#000000"></path>
                             </svg>
                             <a href="javascript:void(0)" className="text-sm ml-4">
-                                <strong>+158 996 888</strong>
+                                <strong>+212 6 369 605 14</strong>
                             </a>
                         </li>
                     </ul>
