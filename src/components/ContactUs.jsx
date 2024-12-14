@@ -2,11 +2,14 @@ import React from 'react'
 
 const ContactUs = () => {
     return (
-        <div className='min-h-screen items-center justify-center flex'>
+        <section id='contact' className='min-h-screen items-center justify-center flex'>
 
             <div className=" grid md:grid-cols-2 gap-16 items-center relative overflow-hidden p-8 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-3xl max-w-6xl mx-auto bg-white mt-4 font-[sans-serif] before:absolute before:right-0 before:w-[300px] before:bg-red-400 before:h-full max-md:before:hidden">
                 <div>
-                    <h2 className="text-gray-800 text-3xl font-extrabold">Get In Touch</h2>
+                    {/* <h2 className="text-gray-800 text-3xl font-extrabold">Get In Touch</h2> */}
+                    <p className="text-red-600 relative before:absolute before:w-20 before:h-1 before:bg-red-600 before:top-[50%] before:left-0 pl-24 text-2xl font-semibold before:translate-y-[-50%] max-sm:before:w-16 max-sm:pl-20">
+                        Get In Touch
+                    </p>
                     <p className="text-sm text-gray-500 mt-4 leading-relaxed">Have a specific inquiry or looking to explore new opportunities? Our
                         experienced team is ready to engage with you.</p>
 
@@ -34,7 +37,7 @@ const ContactUs = () => {
                         </div>
 
                         <button type="button"
-                            className="mt-8 flex items-center justify-center text-sm w-full rounded-md px-6 py-3 bg-red-600 hover:bg-red-700 text-white">
+                            className="mt-8 flex items-center justify-center text-sm w-full rounded-md px-6 py-3 bg-red-600 hover:bg-red-500 text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='#fff' className="mr-2"
                                 viewBox="0 0 548.244 548.244">
                                 <path fill-rule="evenodd"
@@ -78,7 +81,7 @@ const ContactUs = () => {
                 </div>
 
             </div>
-        </div>
+        </section>
     )
 }
 

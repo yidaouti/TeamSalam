@@ -1,5 +1,6 @@
 import AboutUs from "./components/AboutUs"
 import ContactUs from "./components/ContactUs"
+import FAQ from "./components/FAQ"
 import Footer from "./components/Footer"
 import GoToTop from "./components/Gototop"
 import Header from "./components/Header"
@@ -11,15 +12,18 @@ function App() {
 
   return (
     <div>
-      <GoToTop/>
-      <Header/>
-      <Hero/>
-      <Service/>
-      <AboutUs/>
-      <ContactUs/>
-      <Schedule/>
-      <Footer/>
-      </div>
+      {/* <GoToTop /> */}
+      <Header />
+      <Hero />
+      <Service />
+      <AboutUs />
+      <Schedule />
+      <FAQ />
+      <ContactUs />
+      <Footer />
+    </div>
+    
+  
   )
 }
 

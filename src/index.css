@@ -31,7 +31,7 @@
 
 .bg-service-pattern {
   position: relative;
-  background-image: url(./assets/images/bg.jpg);
+  background-image: url(./assets/images/cover.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,6 +60,11 @@ body{
   font-family: 'Montserrat', sans-serif;
 
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 /* .thai-border{
   border-top:12px solid #00209F;

@@ -1,19 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import logo from '../assets/images/logo.png'
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <header className="shadow-md font-sans tracking-wide relative z-50">
+    <header className="shadow-md font-sans tracking-wide w-full z-50 fixed">
       <section className=" thai-border bg-[#C8102E] text-white text-right ">
         <div className='thai-border-white'>
-          <p className="text-sm py-3 px-12">
-            <strong className="mx-3">Address:</strong>SWF New York 185669
-            <strong className="mx-3">Contact No:</strong>1800333665
+          <p className="text-sm py-3 px-12 flex justify-end gap-4 ">
+            <div><i class="fa-solid fa-location-dot"></i> Tayert Sofla (colombia)</div>
+            <div><i class="fa-solid fa-phone"></i> +212 6 369 605 14</div>
           </p>
         </div>
       </section>
@@ -51,48 +73,43 @@ const Header = () => {
           </button>
 
           <ul className="lg:flex lg:gap-x-5 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
-            <li className="mb-6 hidden max-lg:block">
-              <a href="javascript:void(0)" className="flex items-center justify-center gap-2 text-bold">
-                <img src={logo} alt="logo" className="w-14" />
-                <p>Team Salam</p>
-              </a>
-            </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3">
-              <a href="javascript:void(0)" className="hover:text-[#C8102E] text-[#C8102E] block font-bold text-[15px]">
-                Home
-              </a>
-            </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3">
-              <a href="javascript:void(0)" className="hover:text-[#C8102E] text-[#333] block font-bold text-[15px]">
-                Team
-              </a>
-            </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3">
-              <a href="javascript:void(0)" className="hover:text-[#C8102E] text-[#333] block font-bold text-[15px]">
-                Feature
-              </a>
-            </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3">
-              <a href="javascript:void(0)" className="hover:text-[#C8102E] text-[#333] block font-bold text-[15px]">
-                Blog
-              </a>
-            </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3">
-              <a href="javascript:void(0)" className="hover:text-[#C8102E] text-[#333] block font-bold text-[15px]">
-                About
-              </a>
-            </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3">
-              <a href="javascript:void(0)" className="hover:text-[#C8102E] text-[#333] block font-bold text-[15px]">
-                Contact
-              </a>
-            </li>
-            <li className="max-lg:border-b max-lg:py-3 px-3">
-              <a href="javascript:void(0)" className="hover:text-[#C8102E] text-[#333] block font-bold text-[15px]">
-                Source
-              </a>
-            </li>
-          </ul>
+      <li className="mb-6 hidden max-lg:block">
+        <a href="javascript:void(0)" className="flex items-center justify-center gap-2 text-bold">
+          <img src={logo} alt="logo" className="w-14" />
+          <p>Team Salam</p>
+        </a>
+      </li>
+      <li className="max-lg:border-b max-lg:py-3 px-3">
+        <a href="#home" className={`hover:text-[#C8102E] block font-bold text-[15px] ${activeSection === "home" ? "text-[#C8102E]" : "text-[#333]"}`}>
+          Home
+        </a>
+      </li>
+      <li className="max-lg:border-b max-lg:py-3 px-3">
+        <a href="#services" className={`hover:text-[#C8102E] block font-bold text-[15px] ${activeSection === "services" ? "text-[#C8102E]" : "text-[#333]"}`}>
+          Service
+        </a>
+      </li>
+      <li className="max-lg:border-b max-lg:py-3 px-3">
+        <a href="#about" className={`hover:text-[#C8102E] block font-bold text-[15px] ${activeSection === "about" ? "text-[#C8102E]" : "text-[#333]"}`}>
+          About
+        </a>
+      </li>
+      <li className="max-lg:border-b max-lg:py-3 px-3">
+        <a href="#schedule" className={`hover:text-[#C8102E] block font-bold text-[15px] ${activeSection === "schedule" ? "text-[#C8102E]" : "text-[#333]"}`}>
+          Training Schedule
+        </a>
+      </li>
+      <li className="max-lg:border-b max-lg:py-3 px-3">
+        <a href="#faq" className={`hover:text-[#C8102E] block font-bold text-[15px] ${activeSection === "faq" ? "text-[#C8102E]" : "text-[#333]"}`}>
+          FAQ
+        </a>
+      </li>
+      <li className="max-lg:border-b max-lg:py-3 px-3">
+        <a href="#contact" className={`hover:text-[#C8102E] block font-bold text-[15px] ${activeSection === "contact" ? "text-[#C8102E]" : "text-[#333]"}`}>
+          Contact
+        </a>
+      </li>
+    </ul>
         </div>
 
         <div className="flex max-lg:ml-auto">
