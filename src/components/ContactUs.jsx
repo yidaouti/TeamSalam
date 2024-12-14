@@ -13,31 +13,33 @@ const ContactUs = () => {
                     <p className="text-sm text-gray-500 mt-4 leading-relaxed">Have a specific inquiry or looking to explore new opportunities? Our
                         experienced team is ready to engage with you.</p>
 
-                    <form>
+                    <form action="https://formspree.io/f/xovqzgbv" method="POST">
                         <div className="space-y-4 mt-8">
-                            <input type="text" placeholder="Full Name"
+                            <input type="text" name="full_name" placeholder="Full Name"
                                 className="px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-gray-300 focus:border-red-600 outline-none" />
-                            <input type="text" placeholder="Street"
+
+                            <input type="text" name="street" placeholder="Street"
                                 className="px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-gray-300 focus:border-red-600 outline-none" />
+
                             <div className="grid grid-cols-2 gap-6">
-                                <input type="text" placeholder="City"
+                                <input type="text" name="city" placeholder="City"
                                     className="px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-gray-300 focus:border-red-600 outline-none" />
 
-                                <input type="text" placeholder="Postcode"
+                                <input type="text" name="postcode" placeholder="Postcode"
                                     className="px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-gray-300 focus:border-red-600 outline-none" />
                             </div>
-                            <input type="number" placeholder="Phone No."
+
+                            <input type="number" name="phone_no" placeholder="Phone No."
                                 className="px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-gray-300 focus:border-red-600 outline-none" />
 
-                            <input type="email" placeholder="Email"
+                            <input type="email" name="email" placeholder="Email"
                                 className="px-2 py-3 bg-white w-full text-gray-800 text-sm border-b border-gray-300 focus:border-red-600 outline-none" />
 
-                            <textarea placeholder="Write Message"
+                            <textarea name="message" placeholder="Write Message"
                                 className="px-2 pt-3 bg-white w-full text-gray-800 text-sm border-b border-gray-300 focus:border-red-600 outline-none"></textarea>
                         </div>
 
-                        <button type="button"
-                            className="mt-8 flex items-center justify-center text-sm w-full rounded-md px-6 py-3 bg-red-600 hover:bg-red-500 text-white">
+                        <button type="submit" className="mt-8 flex items-center justify-center text-sm w-full rounded-md px-6 py-3 bg-red-600 hover:bg-red-500 text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='#fff' className="mr-2"
                                 viewBox="0 0 548.244 548.244">
                                 <path fill-rule="evenodd"
@@ -47,6 +49,7 @@ const ContactUs = () => {
                             Send Message
                         </button>
                     </form>
+
 
                     <ul className="mt-4 flex flex-wrap justify-center gap-6">
                         <li className="flex items-center text-red-600">
