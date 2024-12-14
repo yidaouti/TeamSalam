@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div>
-      {/* <GoToTop /> */}
+      <GoToTop />
       <Header />
       <Hero />
       <Service />
