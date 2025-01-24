@@ -14,12 +14,13 @@ function App() {
     <div>
       <GoToTop />
       <Header />
-      <Hero />
-      <Service />
-      <AboutUs />
-      <Schedule />
-      <FAQ />
-      <ContactUs />
+        <Hero />
+        <Service />
+        <AboutUs />
+        <Schedule />
+        <FAQ />
+        <ContactUs />
+      
       <Footer />
     </div>
     

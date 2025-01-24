@@ -21,13 +21,14 @@ const Schedule = () => {
   };
 
   const sessions = [
-    { time: "06-07:30 PM", title: "Cardio, Muay Thai", instructor: "3abid" },
-    { time: "10-11:30 PM", title: "Cardio, Muay Thai", instructor: "khalid" },
-    { time: "06-07:30 PM", title: "Cardio, Muay Thai", instructor: "3abid" },
-    { time: "10-11:30 PM", title: "Cardio, Muay Thai", instructor: "khalid" },
-    { time: "06-07:30 PM", title: "Cardio, Muay Thai", instructor: "3abid" },
-    { time: "10-11:30 PM", title: "Cardio, Muay Thai", instructor: "khalid" },
+    { time: "08:00-09:00 AM", title: "Beginner Muay Thai", instructor: "Ahmed" },
+    { time: "12:00-01:30 PM", title: "Intermediate Boxing", instructor: "Sarah" },
+    { time: "05:00-06:30 PM", title: "Cardio Kickboxing", instructor: "Youssef" },
+    { time: "07:00-08:30 PM", title: "Advanced Muay Thai", instructor: "Kamal" },
+    { time: "09:00-10:00 AM", title: "Strength Training", instructor: "Hana" },
+    { time: "06:00-07:00 PM", title: "Flexibility & Stretching", instructor: "Ali" },
   ];
+  
 
   const daysOfWeek = [
     "Monday",
